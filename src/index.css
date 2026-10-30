@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --sat: env(safe-area-inset-top, 0px);
+    --sab: env(safe-area-inset-bottom, 0px);
+    --sal: env(safe-area-inset-left, 0px);
+    --sar: env(safe-area-inset-right, 0px);
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #0d0c0a;
+    background-image: 
+      radial-gradient(rgba(217, 180, 114, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, #110f0c 0%, #080706 100%);
+    background-size: 12px 12px, 100% 100%;
+    color: #f5eedb;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* 1930s Comic Typography */
+.font-comic {
+  font-family: 'Oswald', 'Bebas Neue', sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.font-typewriter {
+  font-family: 'Special Elite', 'Courier New', monospace;
+}
+
+.font-noir {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.05em;
+}
+
+/* Authentic Ben-Day / Halftone dot patterns for comic shading */
+.comic-halftone-dark {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.28) 1.5px, transparent 1.5px);
+  background-size: 6px 6px;
+}
+
+.comic-halftone-amber {
+  background-image: radial-gradient(rgba(217, 119, 6, 0.22) 1.5px, transparent 1.5px);
+  background-size: 7px 7px;
+}
+
+.comic-halftone-cream {
+  background-image: radial-gradient(rgba(120, 90, 40, 0.15) 1.5px, transparent 1.5px);
+  background-size: 6px 6px;
+}
+
+/* Comic Panel Borders & Hard Shadows */
+.comic-border-sm {
+  border: 2px solid #14120e;
+  box-shadow: 2px 2px 0px #000000;
+}
+
+.comic-border {
+  border: 2.5px solid #14120e;
+  box-shadow: 3px 3px 0px #000000;
+}
+
+.comic-border-lg {
+  border: 3px solid #14120e;
+  box-shadow: 4px 4px 0px #000000;
+}
+
+/* Comic Button with chunky mechanical press effect */
+.comic-btn-yellow {
+  background: #f59e0b;
+  color: #110e08;
+  border: 2.5px solid #110e08;
+  box-shadow: 3px 3px 0px #000000;
+  transition: all 0.1s ease;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.comic-btn-yellow:hover:not(:disabled) {
+  background: #fbbf24;
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.comic-btn-yellow:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #000000;
+}
+
+.comic-btn-dark {
+  background: #231f1a;
+  color: #f5eedb;
+  border: 2px solid #110e08;
+  box-shadow: 3px 3px 0px #000000;
+  transition: all 0.1s ease;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.comic-btn-dark:hover:not(:disabled) {
+  background: #2f2a24;
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.comic-btn-dark:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #000000;
+}
+
+/* 1930s Pulp Ribbon Banner (like on the collectible role cards) */
+.comic-ribbon-banner {
+  background-color: #f6e8c8;
+  color: #120f0a;
+  border: 2.5px solid #120f0a;
+  box-shadow: 2px 3px 0px rgba(0, 0, 0, 0.85);
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* Aged comic paper styling */
+.comic-paper {
+  background-color: #f7edd7;
+  color: #18140f;
+  background-image: 
+    radial-gradient(rgba(180, 140, 80, 0.12) 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+
+/* Speech bubble pointer */
+.comic-speech-bubble {
+  position: relative;
+  border: 2.5px solid #120f0a;
+  box-shadow: 3px 3px 0px #000000;
+}
+.comic-speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 24px;
+  border-width: 10px 10px 0 0;
+  border-style: solid;
+  border-color: #120f0a transparent transparent transparent;
+  display: block;
+  width: 0;
+}
+
+/* Custom scrollbar for comic theme */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #14110d;
+}
+::-webkit-scrollbar-thumb {
+  background: #b48c48;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4a95a;
+}

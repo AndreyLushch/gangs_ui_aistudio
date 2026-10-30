@@ -1,0 +1,8 @@
+{
+  "name": "Remix Gangs — Игра в стиле Мафии",
+  "description": "Telegram Mini App игры «Gangs» для живой компании 4–25 человек в одной комнате без ведущего.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
